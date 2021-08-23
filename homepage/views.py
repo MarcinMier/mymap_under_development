@@ -5,7 +5,7 @@ from users.views import register
 
 def home(request):
     if request.user.is_authenticated:
-        return redirect('/users/profile.html') # nie mam pojecia jak zrobic to inaczej
+        return render(request, 'users/profile.html') # nie mam pojecia jak zrobic to inaczej
     else:
         return register(request)
 
